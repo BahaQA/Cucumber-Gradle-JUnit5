@@ -48,7 +48,7 @@ jobs:
         java-package: ${{ env.JAVA_PACKAGE }}
         architecture: ${{ env.JAVA_ARCH }}
         distribution: ${{ env.JAVA_DISTRO }}
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       with:
         path: ~/.m2/repository
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
